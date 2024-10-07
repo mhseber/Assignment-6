@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font Icons -->
+    <script src="https://kit.fontawesome.com/3eac091a3c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Pet Shop</title>
+</head>
+
+<body class="font-Lato ">
+    <!-- nav section -->
+    <nav class="pt-7">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="flex gap-2 pl-20">
+                    <img class="w-[30px] h-[30px]" src="images/logo.webp" alt="">
+                    <a class=" text-2xl font-black  w-23 h-9 "> Peddy</a>
+                </div>
+
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 font-black text-xl">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end lg:pr-[90px]">
+                <a class="w-[56px] h-[56px] border border-[1px solid rgba(14, 122, 129, 0.2)] rounded-full"><i
+                        class="fa-regular fa-user w-[12px] h-[6px] pl-5 pt-4"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- banner section -->
+    <section>
+        <div>
+            <div class="hero  min-h-screen pt-10">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <p class="text-gray-500 text-xl  pb-7">Bringing Families Together ❤️‍🔥 </p>
+                        <h1 class="text-7xl font-bold">Your Path to Adoption Starts Here</h1>
+                        <p class="py-6 text-[#131313] font-normal">
+                            Starting the journey to adoption is a beautiful step toward building your family. Our team
+                            <br>
+                            is here to guide you through every stage, offering support, compassion, and expert care
+                            throughout the process.
+                        </p>
+                        <button id="viewMoreBtn"
+                            class="btn w-[163px] h-[56px] bg-[#0E7A81] text-sm font-bold text-white">View
+                            More</button>
+                        <img class="pt-10" src="images/pet.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main id="main-section">
+        <!-- text -->
+        <div>
+            <div class="hero pt-10 ">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-3xl font-bold">Adopt Your Best Friend</h1>
+                        <p class="py-6">
+                            Adopt your perfect companion—dog, cat, or other loving animals today!
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- button dynamically create -->
+        <div>
+            <div id="categories" class="py-3 flex gap-5  justify-evenly "></div>
+        </div>
+        <!--text-button  -->
+        <div class="flex justify-between mt-6 pl-14 pr-14">
+            <p class="w-[189px] h-[29px] text-xl font-black">Best Deal For You</p>
+            <button class="btn w-[163px] h-[56px] bg-[#0E7A81] text-sm font-bold text-white">Sort by Price</button>
+        </div>
+        <!-- pets section -->
+        <div class="flex ">
+            <!-- Pet cart section -->
+            <section id="pets" class="w-11/12  grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-10 pr-3 pl-3">
+            </section>
+            <!-- selection img section -->
+            <div id="imageDisplay" class="border border-gray-300 rounded-lg gap-2 w-[380px] h-[800px] mt-10"></div>
+        </div>
+
+
+    </main>
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showModalData" class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modal-content">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- footer section -->
+    <footer class="footer bg-black text-base-content p-10">
+        <div>
+            <div class="flex gap-2 pl-20">
+                <img class="w-[30px] h-[30px]" src="images/logo.webp" alt="">
+                <a class=" text-2xl font-black text-teal-200  w-23 h-9 "> Peddy</a>
+            </div>
+            <div class="text-white  text-xs font-bold pl-20 pt-3 ">
+                <p>Location: Dhaka katabon pet shop</p>
+                <br>
+                <p> Phone: +00119827363</p>
+                <br>
+                <p> Email: pet@Gmail.com</p>
+                <br>
+                <p> Opening hours: 10.00AM - 6.00PM</p>
+            </div>
+            <div class="flex gap-3 pt-3 pl-16">
+                <img src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png" alt="">
+                <img src="https://img.icons8.com/?size=48&id=oWiuH0jFiU0R&format=png" alt="">
+                <img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="">
+                <img src="https://img.icons8.com/?size=48&id=Xy10Jcu1L2Su&format=png" alt="">
+            </div>
+        </div>
+        <div class="text-white text-xs font-bold">
+            <h6 class="footer-title text-2xl font-black text-teal-200  w-23 h-9  ">Useful Links</h6>
+            <a>Home</a>
+            <a>About Us</a>
+            <a>Animals</a>
+            <a>Foundation</a>
+            <a>Contact</a>
+
+        </div>
+        <div>
+            <h1 class="text-2xl font-black text-teal-200  w-23 h-9 ">Drop a Message</h1>
+            <br>
+            <input type="text" placeholder="Enter Your Email"
+                class="input input-bordered w-full max-w-xs bg-[#FFFFFF0D]" />
+            <button
+                class="btn bg-[#0E7A81] text-white text-xl font-bold w-[240px] h-[49px] rounded-lg border-none gap-3">Subscribe</button>
+        </div>
+    </footer>
+    <script src="js-file/index.js"></script>
+</body>
+
+</html>
